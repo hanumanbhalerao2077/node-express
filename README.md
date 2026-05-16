@@ -32,35 +32,8 @@ Modern responsive portfolio dashboard showcasing DevOps skills with a production
 
 ## Folder Structure
 ```
-node-express/
-│
-├── src/
-│   ├── routes/
-│   │   ├── index.js
-│   │   ├── pages.js
-│   │   └── api.js
-│   ├── views/
-│   ├── public/
-│   │   ├── css/
-│   │   │   └── styles.css
-│   │   └── js/
-│   │       └── app.js
-│   ├── controllers/
-│   │   ├── pageController.js
-│   │   └── apiController.js
-│   └── middleware/
-│       └── errorHandlers.js
-│
-├── views/
-│   └── (EJS templates + partials)
-│
-├── Dockerfile
-├── docker-compose.yml
-├── .dockerignore
-├── .gitignore
-├── package.json
-├── server.js
-└── README.md
+<img width="1264" height="841" alt="Gemini_Generated_Image_92itrt92itrt92it" src="https://github.com/user-attachments/assets/6225d725-748e-44da-8f91-30e80defd235" />
+
 ```
 
 ## Environment Variables
