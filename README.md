@@ -32,7 +32,7 @@ Modern responsive portfolio dashboard showcasing DevOps skills with a production
 
 ## Folder Structure
 ```
-<img width="1264" height="841" alt="Gemini_Generated_Image_92itrt92itrt92it" src="https://github.com/user-attachments/assets/6225d725-748e-44da-8f91-30e80defd235" />
+<img width="1264" height="841" alt="Gemini_Generated_Image_l5fwzyl5fwzyl5fw" src="https://github.com/user-attachments/assets/0a8eb241-d07a-48df-8648-b284acfa34ef" />
 
 ```
 
