@@ -3,21 +3,21 @@
 Modern responsive portfolio dashboard showcasing DevOps skills with a production-ready Express scaffold.
 
 ## Features
-- ✅ Landing page with hero + navbar (Bootstrap 5 + dark modern theme)
-- ✅ Skills section
-- ✅ Projects section with animated cards/buttons
-- ✅ DevOps tools section (Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, AWS)
-- ✅ Contact page UI
-- ✅ Responsive layout
+-  Landing page with hero + navbar (Bootstrap 5 + dark modern theme)
+-  Skills section
+-  Projects section with animated cards/buttons
+-  DevOps tools section (Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, AWS)
+-  Contact page UI
+-  Responsive layout
 - ✅ Animated/hover effects
-- ✅ Health check API route: `GET /api/health`
-- ✅ About API route returning JSON: `GET /api/about`
-- ✅ EJS templating
-- ✅ Security: `helmet`
-- ✅ Performance: `compression`
-- ✅ Logging: `morgan`
-- ✅ CORS enabled
-- ✅ Centralized error handling
+-  Health check API route: `GET /api/health`
+-  About API route returning JSON: `GET /api/about`
+-  EJS templating
+-  Security: `helmet`
+-  Performance: `compression`
+   Logging: `morgan`
+-  CORS enabled
+-  Centralized error handling
 
 ## Tech Stack
 - Node.js
@@ -28,10 +28,7 @@ Modern responsive portfolio dashboard showcasing DevOps skills with a production
 - Docker Compose
 
 ## Screenshots
-> Add your screenshots here.
-- Screenshot 1: Landing page
-- Screenshot 2: Projects page
-- Screenshot 3: Contact page
+
 
 ## Folder Structure
 ```
