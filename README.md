@@ -9,7 +9,7 @@ Modern responsive portfolio dashboard showcasing DevOps skills with a production
 -  DevOps tools section (Docker, Kubernetes, Jenkins, GitHub Actions, Terraform, AWS)
 -  Contact page UI
 -  Responsive layout
-- ✅ Animated/hover effects
+-  Animated/hover effects
 -  Health check API route: `GET /api/health`
 -  About API route returning JSON: `GET /api/about`
 -  EJS templating
