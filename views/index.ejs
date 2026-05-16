@@ -1,0 +1,346 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/nav') %>
+
+<header class="hero">
+  <div class="container pt-5 mt-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <div class="badge-glow mb-3">🚀 DevOps Intern Portfolio</div>
+        <h1 class="display-5 fw-bold hero-title">
+          Build, Ship, Secure —<br />
+          DevOps tooling in action.
+        </h1>
+        <p class="lead text-muted">
+          I’m <span class="text-white fw-semibold">Hanuman Bhalerao</span>. This portfolio shows how I think about CI/CD,
+          containerization, IaC, and observability—through real DevOps-style projects.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="/projects" class="btn btn-primary btn-animated px-4">
+            <i class="bi bi-diagram-3"></i> Projects
+          </a>
+          <a href="/contact" class="btn btn-outline-light btn-animated px-4">
+            <i class="bi bi-envelope"></i> Contact
+          </a>
+          <a href="/resume/README.txt" class="btn btn-outline-primary btn-animated px-4 resume-btn" download>
+            <i class="bi bi-file-earmark-arrow-down"></i> Resume
+          </a>
+        </div>
+
+
+        <div class="stats mt-4">
+          <div class="stat-card reveal">
+            <div class="stat-number">CI/CD</div>
+            <div class="stat-label">Pipelines & automation</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-number">IaC</div>
+            <div class="stat-label">Terraform-ready thinking</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-number">Containers</div>
+            <div class="stat-label">Docker & orchestration</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="glass-card p-4 reveal">
+          <h3 class="h5 text-white mb-3">Hands-on DevOps</h3>
+
+          <div class="skill-list">
+            <div class="skill-pill"><i class="bi bi-check2-circle"></i> Linux</div>
+            <div class="skill-pill"><i class="bi bi-check2-circle"></i> Docker</div>
+            <div class="skill-pill"><i class="bi bi-check2-circle"></i> Kubernetes</div>
+            <div class="skill-pill"><i class="bi bi-check2-circle"></i> GitHub Actions</div>
+            <div class="skill-pill"><i class="bi bi-check2-circle"></i> Terraform</div>
+            <div class="skill-pill"><i class="bi bi-check2-circle"></i> AWS</div>
+          </div>
+
+          <hr class="hr-glow" />
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="text-muted small">Portfolio APIs</div>
+              <div class="fw-semibold">/api/health • /api/profile</div>
+            </div>
+            <a class="btn btn-sm btn-outline-light btn-animated" href="/api/health" aria-label="Health API">
+              <i class="bi bi-heart-pulse"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7">
+        <div class="glass-card p-4 reveal h-100">
+          <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+            <div>
+              <h2 class="section-title mb-1">About Me</h2>
+              <p class="section-subtitle mb-0">Intern-focused, delivery-first DevOps workflow.</p>
+            </div>
+            <div class="badge-glow">⚡ Learning → Shipping</div>
+          </div>
+
+          <div class="mt-4">
+            <p class="text-muted mb-3">
+              I’m currently building production-style pipelines and infrastructure automation. My goal is to help teams ship
+              faster with safer deployments—using containers, CI/CD, IaC, and monitoring.
+            </p>
+
+            <ul class="checklist">
+              <li><span class="check"></span> CI/CD pipelines with repeatable steps</li>
+              <li><span class="check"></span> Container builds that prioritize reliability</li>
+              <li><span class="check"></span> IaC modules and environment separation</li>
+              <li><span class="check"></span> Observability mindset: logs + health checks</li>
+            </ul>
+          </div>
+
+          <div class="mt-4 d-flex flex-wrap gap-3">
+            <a class="btn btn-primary btn-animated" href="/about">
+              <i class="bi bi-person-badge"></i> View About
+            </a>
+            <a class="btn btn-outline-light btn-animated" href="/api/profile">
+              <i class="bi bi-code-slash"></i> Portfolio JSON
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="glass-card p-0 reveal h-100 overflow-hidden">
+          <div class="image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=70"
+              alt="Cloud and infrastructure dashboard"
+              loading="lazy"
+              class="img-fluid"
+            />
+            <div class="image-overlay">
+              <div class="image-overlay-content">
+                <div class="small text-white-50">DevOps focus</div>
+                <div class="fw-bold">Automation • Reliability • Security</div>
+                <div class="mt-2">
+                  <a href="/projects" class="btn btn-sm btn-outline-light btn-animated">Explore work</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="chip">Docker</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">CI/CD</span>
+              <span class="chip">IaC</span>
+              <span class="chip">Monitoring</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">Core tools I use to build and run DevOps workflows.</p>
+    </div>
+
+    <div class="row g-3">
+      <% const skills = ['Docker','Kubernetes','Jenkins','GitHub Actions','Terraform','AWS','Linux','CI/CD','Monitoring','Nginx','Observability']; %>
+      <% skills.forEach(function(s){ %>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="feature-card reveal" data-tilt>
+            <div class="feature-icon"><i class="bi bi-cpu"></i></div>
+            <div class="feature-name"><%= s %></div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="devops-tools">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">DevOps Tools</h2>
+      <p class="section-subtitle">Docker, Kubernetes, CI/CD, IaC, cloud, and operations—organized as cards.</p>
+    </div>
+
+    <div class="row g-3">
+      <% const tools = [
+        { name: 'Docker', icon: 'bi bi-box-seam', link: '/projects' },
+        { name: 'Kubernetes', icon: 'bi bi-diagram-3-fill', link: '/projects' },
+        { name: 'Jenkins', icon: 'bi bi-gear-fill', link: '/projects' },
+        { name: 'GitHub Actions', icon: 'bi bi-lightning-charge-fill', link: '/projects' },
+        { name: 'Terraform', icon: 'bi bi-braces-asterisk', link: '/projects' },
+        { name: 'AWS', icon: 'bi bi-cloud-arrow-up-fill', link: '/projects' },
+        { name: 'Linux', icon: 'bi bi-terminal', link: '/projects' },
+        { name: 'CI/CD', icon: 'bi bi-diagram-3', link: '/projects' },
+        { name: 'Monitoring', icon: 'bi bi-bar-chart-fill', link: '/projects' },
+        { name: 'Nginx', icon: 'bi bi-window', link: '/projects' }
+      ]; %>
+
+      <% tools.forEach(function(t){ %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a href="/projects" class="tool-card reveal">
+            <div class="tool-icon"><i class="bi <%= t.icon %>"></i></div>
+            <div class="tool-name"><%= t.name %></div>
+            <div class="tool-desc">Project examples using <span class="fw-semibold"><%= t.name %></span></div>
+            <div class="tool-arrow"><i class="bi bi-arrow-right"></i></div>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="glass-card p-4 reveal">
+          <h2 class="section-title mb-2">GitHub Stats</h2>
+          <p class="section-subtitle mb-3">Widgets (update automatically) — demonstrates activity and streak.</p>
+          <div class="github-widgets">
+            <img
+              src="https://github-readme-stats.vercel.app/api?username=hanumanbhalerao2077&show_icons=true&theme=midnight-purple&hide_border=true&count_private=true"
+              alt="GitHub stats"
+              loading="lazy"
+            />
+            <img
+              src="https://github-readme-streak-stats.herokuapp.com/?user=hanumanbhalerao2077&theme=midnight-purple&hide_border=true"
+              alt="GitHub streak"
+              loading="lazy"
+            />
+            <img
+              src="https://github-readme-activity-graph.vercel.app/graph?username=hanumanbhalerao2077&theme=github-dark&hide_border=true"
+              alt="GitHub contribution graph"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="glass-card p-4 reveal">
+          <h2 class="section-title mb-2">Learning Journey</h2>
+          <p class="section-subtitle mb-3">A DevOps-style path with outcomes, not just topics.</p>
+
+          <div class="timeline">
+            <% const timeline = [
+              { t: 'Week 1–2', title: 'Linux + Networking Basics', s: 'Permissions, process management, networking troubleshooting.' },
+              { t: 'Week 3–4', title: 'Docker Foundations', s: 'Images, layers, volumes, reproducible builds.' },
+              { t: 'Week 5–6', title: 'CI/CD Pipelines', s: 'Automated build/test/deploy workflows (Jenkins + GitHub Actions patterns).' },
+              { t: 'Week 7–8', title: 'Kubernetes Deployments', s: 'Deployments, services, ingress, probes, rollouts.' },
+              { t: 'Week 9–10', title: 'Terraform + IaC', s: 'Modules, variables/outputs, environment separation.' },
+              { t: 'Ongoing', title: 'Monitoring + Reliability', s: 'Health checks, logs, and operational mindset.' }
+            ]; %>
+
+            <% timeline.forEach(function(item){ %>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div>
+                  <div class="fw-semibold"><%= item.t %> — <%= item.title %></div>
+                  <div class="text-muted small"><%= item.s %></div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="glass-card p-4 reveal">
+          <h2 class="section-title mb-2">Project Highlights</h2>
+          <p class="section-subtitle mb-3">A quick look at the DevOps work. Full list is on the Projects page.</p>
+
+          <div class="row g-3">
+            <% const projects = [
+              { tag:'Docker', title:'Secure Container Baseline', icon:'bi bi-box-seam', gh:'https://github.com/hanumanbhalerao2077', live:'#', stack:['Node.js','Express','Docker','Nginx'], desc:'Production-style Express setup inside Docker (optimized image + security headers + /health).' },
+              { tag:'Kubernetes', title:'Rollouts & Probes Lab', icon:'bi bi-diagram-3-fill', gh:'https://github.com/hanumanbhalerao2077', live:'#', stack:['Kubernetes','Ingress','Docker'], desc:'Deployment/service/ingress manifests with readiness/liveness probes and rollout ideas.' },
+              { tag:'CI/CD', title:'Pipeline Starter', icon:'bi bi-lightning-charge-fill', gh:'https://github.com/hanumanbhalerao2077', live:'#', stack:['GitHub Actions','Jenkins','Docker'], desc:'Reusable build-test-deploy pipeline workflow (artifacts, caching, environment steps).' }
+            ]; %>
+
+            <% projects.forEach(function(p){ %>
+              <div class="col-md-6">
+                <div class="project-card reveal">
+                  <div class="project-top">
+                    <div class="project-tag"><%= p.tag %></div>
+                    <div class="project-icon"><i class="bi <%= p.icon %>"></i></div>
+                  </div>
+                  <h3 class="project-title"><%= p.title %></h3>
+                  <p class="project-desc text-muted"><%= p.desc %></p>
+                  <div class="mt-2 d-flex gap-2 flex-wrap">
+                    <% p.stack.forEach(function(s){ %>
+                      <span class="tiny-chip"><%= s %></span>
+                    <% }) %>
+                  </div>
+                  <div class="project-actions">
+                    <div class="d-flex gap-2 flex-wrap">
+                      <a class="btn btn-sm btn-outline-light btn-animated" href="<%= p.gh %>" target="_blank" rel="noreferrer">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                      <a class="btn btn-sm btn-primary btn-animated" href="<%= p.live %>" target="_blank" rel="noreferrer">
+                        <i class="bi bi-box-arrow-up-right"></i> Live
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <% }) %>
+          </div>
+
+          <div class="mt-4">
+            <a href="/projects" class="btn btn-primary btn-animated px-4">
+              <i class="bi bi-folder2-open"></i> View all projects
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="glass-card p-4 reveal h-100">
+          <h2 class="section-title mb-2">Ready to collaborate?</h2>
+          <p class="section-subtitle mb-3">If you’re hiring interns for DevOps/Cloud, let’s connect.</p>
+
+          <div class="codeblock">
+            <div class="code-title">Fast actions</div>
+            <div class="p-3">
+              <a class="btn btn-outline-light btn-animated w-100 mb-2" href="/contact">
+                <i class="bi bi-send"></i> Contact form
+              </a>
+              <a class="btn btn-outline-light btn-animated w-100 mb-2" href="/api/health">
+                <i class="bi bi-heart-pulse"></i> Check /api/health
+              </a>
+              <a class="btn btn-outline-light btn-animated w-100" href="/api/profile">
+                <i class="bi bi-code-slash"></i> Get /api/profile JSON
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <div class="small text-muted">Tip: Update project URLs + credential links later for a final “real” version.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
+
+

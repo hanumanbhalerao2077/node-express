@@ -1,0 +1,109 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/nav') %>
+
+<main class="container pt-5 mt-5">
+  <div class="page-head">
+    <h1 class="display-6 fw-bold">Projects</h1>
+    <p class="text-muted">Realistic DevOps project cards (Docker, Kubernetes, CI/CD, IaC, and operations) — each with tech stack + actions.</p>
+  </div>
+
+  <div class="row g-4">
+    <% const projects = [
+      {
+        tag:'Docker',
+        icon:'bi bi-box-seam',
+        title:'Dockerized Web App (Secure Container Baseline)',
+        desc:'Production-style Express/EJS app built with Docker best practices: optimized build, secure headers, compressed responses, and a health check.',
+        stack:['Node.js','Express','EJS','Docker','Nginx'],
+        githubUrl:'https://github.com/hanumanbhalerao2077',
+        liveUrl:'#'
+      },
+      {
+        tag:'Kubernetes',
+        icon:'bi bi-diagram-3-fill',
+        title:'Kubernetes Deployment Lab (Rollouts & Probes)',
+        desc:'Manifests for deployments/services with readiness/liveness probes, rollout strategy concepts, and service exposure patterns.',
+        stack:['Kubernetes','Ingress','Docker','Helm (optional)'],
+        githubUrl:'https://github.com/hanumanbhalerao2077',
+        liveUrl:'#'
+      },
+      {
+        tag:'CI/CD',
+        icon:'bi bi-lightning-charge-fill',
+        title:'CI/CD Pipeline Starter (Jenkins + GitHub Actions)',
+        desc:'Pipeline structure for build → test → artifact → deploy, using reusable steps and consistent environment variables.',
+        stack:['Jenkins','GitHub Actions','Docker','Node.js'],
+        githubUrl:'https://github.com/hanumanbhalerao2077',
+        liveUrl:'#'
+      },
+      {
+        tag:'Terraform',
+        icon:'bi bi-braces-asterisk',
+        title:'Terraform Infrastructure Blueprint (IaC Patterns)',
+        desc:'Terraform project structure with modules, variables/outputs, and environment separation (dev/stage/prod mindset).',
+        stack:['Terraform','AWS','VPC','IAM'],
+        githubUrl:'https://github.com/hanumanbhalerao2077',
+        liveUrl:'#'
+      },
+      {
+        tag:'Monitoring',
+        icon:'bi bi-bar-chart-fill',
+        title:'Observability Starter (Logging + Reliability Checks)',
+        desc:'Health checks, logging strategy, and dashboard-oriented thinking for monitoring operational readiness.',
+        stack:['Monitoring','Logging','Alerts mindset','Metrics concepts'],
+        githubUrl:'https://github.com/hanumanbhalerao2077',
+        liveUrl:'#'
+      },
+      {
+        tag:'Nginx',
+        icon:'bi bi-window',
+        title:'Nginx Reverse Proxy Setup (TLS-ready Patterns)',
+        desc:'Reverse proxy configuration patterns: caching headers, gzip compression, and routing/container integration ideas.',
+        stack:['Nginx','Linux','Docker'],
+        githubUrl:'https://github.com/hanumanbhalerao2077',
+        liveUrl:'#'
+      }
+    ]; %>
+
+    <% projects.forEach(function(p){ %>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-tag"><%= p.tag %></div>
+            <div class="project-icon"><i class="bi <%= p.icon %>"></i></div>
+          </div>
+          <h3 class="project-title"><%= p.title %></h3>
+          <p class="project-desc text-muted"><%= p.desc %></p>
+
+          <div class="mt-2 d-flex gap-2 flex-wrap">
+            <% p.stack.forEach(function(s){ %>
+              <span class="tiny-chip"><%= s %></span>
+            <% }) %>
+          </div>
+
+          <div class="project-actions">
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-sm btn-outline-light btn-animated" href="<%= p.githubUrl %>" target="_blank" rel="noreferrer">
+                <i class="bi bi-github"></i> GitHub
+              </a>
+              <a class="btn btn-sm btn-primary btn-animated" href="<%= p.liveUrl %>" target="_blank" rel="noreferrer">
+                <i class="bi bi-box-arrow-up-right"></i> Live
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+  <div class="mt-5 glass-card p-4 reveal">
+    <h2 class="h4 mb-3">Make it even more “real”</h2>
+    <p class="text-muted mb-0">
+      Replace the live/demo placeholders with actual hosted links (Render/Vercel/AWS) and update GitHub URLs per repo. This template is production-friendly and already container-ready.
+    </p>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
+
+

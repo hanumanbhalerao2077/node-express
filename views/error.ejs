@@ -1,0 +1,26 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/nav') %>
+
+<main class="container pt-5 mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="glass-card p-4">
+        <h1 class="display-6 fw-bold mb-2"><%= title %></h1>
+        <p class="text-muted mb-0"><%= message %></p>
+
+        <% if (stack) { %>
+          <pre class="pre mt-3"><code><%= stack %></code></pre>
+        <% } %>
+
+        <div class="mt-4">
+          <a class="btn btn-primary btn-animated" href="/">
+            <i class="bi bi-house"></i> Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
+

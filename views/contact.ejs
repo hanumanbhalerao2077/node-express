@@ -1,0 +1,150 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/nav') %>
+
+<main class="container pt-5 mt-5">
+  <div class="page-head">
+    <h1 class="display-6 fw-bold">Contact</h1>
+    <p class="text-muted">Message UI (scaffold) + direct links. Add email backend later if needed.</p>
+  </div>
+
+  <% if (typeof formSubmitted !== 'undefined' && formSubmitted) { %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="glass-card p-4 mb-4 reveal">
+          <div class="fw-semibold mb-2">Message received</div>
+          <div class="text-muted">Thanks <%= (submitted && submitted.name) ? submitted.name : '' %>! I’ll get back to <%= (submitted && submitted.email) ? submitted.email : '' %>.</div>
+          <div class="mt-3 d-flex gap-2 flex-wrap">
+            <a class="btn btn-primary btn-animated" href="/projects"><i class="bi bi-folder2-open"></i> View Projects</a>
+            <a class="btn btn-outline-light btn-animated" href="/resume/README.txt" download>
+              <i class="bi bi-file-earmark-arrow-down"></i> Resume
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <% if (typeof formErrors !== 'undefined' && formErrors && Object.keys(formErrors).length) { %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="glass-card p-4 mb-4 reveal" style="border-color: rgba(255,77,109,.35); background: rgba(255,77,109,.06);">
+          <div class="fw-semibold mb-2" style="color: rgba(255,77,109,.95);">Please fix the form errors</div>
+          <ul class="checklist mb-0">
+            <% Object.keys(formErrors).forEach(function(k){ %>
+              <li>
+                <span class="check" style="background: linear-gradient(135deg, rgba(255,77,109,.95), rgba(124,92,255,.55));"></span>
+                <div>
+                  <div class="fw-semibold"><%= k %></div>
+                  <div class="text-muted small"><%= formErrors[k] %></div>
+                </div>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div class="glass-card p-4 reveal">
+        <% if (!(typeof formSubmitted !== 'undefined' && formSubmitted)) { %>
+        <form action="/contact" method="POST" class="contact-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Full Name</label>
+              <input
+                class="form-control input-animated"
+                type="text"
+                name="name"
+                required
+                placeholder="Your name"
+                value="<%= (formValues && formValues.name) ? formValues.name : '' %>"
+              />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input
+                class="form-control input-animated"
+                type="email"
+                name="email"
+                required
+                placeholder="you@example.com"
+                value="<%= (formValues && formValues.email) ? formValues.email : '' %>"
+              />
+            </div>
+            <div class="col-12">
+              <label class="form-label">Topic</label>
+              <select class="form-select input-animated" name="topic" required>
+                <option value="">Choose...</option>
+                <option <%= (formValues && formValues.topic === 'Internship Opportunity') ? 'selected' : '' %>>Internship Opportunity</option>
+                <option <%= (formValues && formValues.topic === 'DevOps Project Collaboration') ? 'selected' : '' %>>DevOps Project Collaboration</option>
+                <option <%= (formValues && formValues.topic === 'Speaking / Mentoring') ? 'selected' : '' %>>Speaking / Mentoring</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message</label>
+              <textarea
+                class="form-control input-animated"
+                name="message"
+                rows="5"
+                required
+                placeholder="What do you want to build together?"
+              ><%= (formValues && formValues.message) ? formValues.message : '' %></textarea>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <button class="btn btn-primary btn-animated px-4" type="submit">
+              <i class="bi bi-send"></i> Send Message
+            </button>
+            <a class="btn btn-outline-light btn-animated px-4" href="/projects">
+              <i class="bi bi-folder2-open"></i> View Projects
+            </a>
+          </div>
+
+          <div class="small text-muted mt-3">
+            Note: This scaffold renders the confirmation; wire POST persistence/email in the backend later.
+          </div>
+        </form>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="glass-card p-4 reveal">
+        <h2 class="h4 mb-3">Direct links</h2>
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-outline-light btn-animated" href="mailto:bhaleraohanuman4@gmail.com">
+            <i class="bi bi-envelope"></i> Email
+          </a>
+          <a class="btn btn-outline-light btn-animated" href="https://github.com/hanumanbhalerao2077" target="_blank" rel="noreferrer">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a class="btn btn-outline-light btn-animated" href="https://www.linkedin.com/in/hanuman-bhalerao-420ba9233/" target="_blank" rel="noreferrer">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+        <hr class="hr-glow" />
+
+        <h2 class="h4 mb-3">Resume download</h2>
+        <a class="btn btn-primary btn-animated w-100" href="/resume/README.txt" download>
+          <i class="bi bi-file-earmark-arrow-down"></i> Resume.txt
+        </a>
+
+
+        <div class="mt-4">
+          <h2 class="h4 mb-2">Health check</h2>
+          <div class="text-muted small">API endpoint:</div>
+          <div><a class="link-muted" href="/api/health">/api/health</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
+
+

@@ -1,0 +1,101 @@
+<%- include('partials/head', { title }) %>
+<%- include('partials/nav') %>
+
+<main class="container pt-5 mt-5">
+  <div class="page-head">
+    <h1 class="display-6 fw-bold">About</h1>
+    <p class="text-muted">Human-readable story + a matching portfolio JSON API route.</p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-7">
+      <div class="glass-card p-4 reveal">
+        <h2 class="h4 mb-3">About Me</h2>
+        <p class="text-muted mb-3">
+          I’m <span class="text-white fw-semibold">Hanuman Bhalerao</span>, currently pursuing <span class="fw-semibold">BE-IT (3rd Year)</span>.
+          I enjoy building production-minded DevOps pipelines and infrastructure automation.
+        </p>
+
+        <ul class="checklist">
+          <li><span class="check"></span> Automate deployments with CI/CD patterns</li>
+          <li><span class="check"></span> Use IaC to keep infrastructure repeatable</li>
+          <li><span class="check"></span> Build containers that are secure and reproducible</li>
+          <li><span class="check"></span> Treat monitoring/health as part of delivery</li>
+        </ul>
+
+        <div class="mt-4 d-flex flex-wrap gap-3">
+          <a class="btn btn-primary btn-animated" href="/projects">
+            <i class="bi bi-folder2-open"></i> See Projects
+          </a>
+          <a class="btn btn-outline-light btn-animated" href="/api/profile">
+            <i class="bi bi-person-lines-fill"></i> Portfolio JSON
+          </a>
+          <a class="btn btn-outline-light btn-animated" href="/resume/README.txt" download>
+            <i class="bi bi-file-earmark-arrow-down"></i> Download Resume
+          </a>
+
+        </div>
+      </div>
+
+      <div class="mt-4 glass-card p-4 reveal">
+        <h2 class="h4 mb-3">Certifications</h2>
+        <div class="row g-3">
+          <% const certs = [
+            { title:'AWS Cloud Practitioner (Learning Path)', issuer:'Amazon Web Services', year:'2025', status:'In progress' },
+            { title:'Docker & Containers Essentials', issuer:'Coursera (Project-based learning)', year:'2025', status:'Completed (practice projects)' },
+            { title:'Kubernetes for Developers (Lab-based)', issuer:'Kubernetes ecosystem learning', year:'2025', status:'In progress' }
+          ]; %>
+          <% certs.forEach(function(c){ %>
+            <div class="col-md-6">
+              <div class="feature-card h-100">
+                <div class="feature-icon"><i class="bi bi-award"></i></div>
+                <div class="feature-name"><%= c.title %></div>
+                <div class="text-muted small mt-2"><%= c.issuer %></div>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                  <span class="tiny-chip"><%= c.year %></span>
+                  <span class="tiny-chip" style="border-color: rgba(124,92,255,.35); background: rgba(124,92,255,.10);"><%= c.status %></span>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="glass-card p-4 reveal">
+        <h2 class="h4 mb-3">API Snapshot</h2>
+        <div class="codeblock">
+          <div class="code-title">GET /api/profile</div>
+          <pre class="pre"><code>{ "name": "Hanuman Bhalerao", "role": "DevOps Intern", "skills": ["Docker","Kubernetes"], "certifications": [...] }</code></pre>
+        </div>
+        <div class="small text-muted mt-3">
+          Health: <a class="link-muted" href="/api/health">/api/health</a>
+          <span class="text-muted"> • </span>
+          About: <a class="link-muted" href="/api/about">/api/about</a>
+        </div>
+      </div>
+
+      <div class="mt-4 glass-card p-4 reveal">
+        <h2 class="h4 mb-3">Contact</h2>
+        <div class="d-flex gap-2 flex-wrap">
+          <a class="btn btn-outline-light btn-animated" href="mailto:bhaleraohanuman4@gmail.com">
+            <i class="bi bi-envelope"></i> Email
+          </a>
+          <a class="btn btn-outline-light btn-animated" href="https://github.com/hanumanbhalerao2077" target="_blank" rel="noreferrer">
+            <i class="bi bi-github"></i> GitHub
+          </a>
+          <a class="btn btn-outline-light btn-animated" href="https://www.linkedin.com/in/hanuman-bhalerao-420ba9233/" target="_blank" rel="noreferrer">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </div>
+        <div class="small text-muted mt-3">Resume file: <span class="fw-semibold">README.txt</span></div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
+
+
